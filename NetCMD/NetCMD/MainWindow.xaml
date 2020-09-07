@@ -1,0 +1,74 @@
+﻿<Window x:Class="NetCMD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetCMD"
+        mc:Ignorable="d"
+        Title="Tools" Height="350" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
+    <Window.Effect>
+        <DropShadowEffect RenderingBias="Quality"/>
+    </Window.Effect>
+    <Grid Background="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}">
+        <Button HorizontalAlignment="Left" Margin="229,214,0,0" VerticalAlignment="Top" Width="258"  Click = "Button_Click" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="33">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.Style> 
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="DarkGoldenrod"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Label Content="Static IP" Foreground="#FF290E0E" FontWeight="Bold" FontSize="14"/>
+        </Button>
+        <TextBox x:Name="ip" HorizontalAlignment="Left" Height="23" Margin="229,50,0,0" TextWrapping="Wrap" Text="192.168.1.199" VerticalAlignment="Top" Width="258" Background="#FF584CD1" Foreground="#FF93E1EE">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="ip1" HorizontalAlignment="Left" Height="23" Margin="229,102,0,0" TextWrapping="Wrap" Text="192.168.1.1" VerticalAlignment="Top" Width="258" BorderBrush="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" Background="#FF584CD1" Foreground="#FF93E1EE">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label Content="Ip" HorizontalAlignment="Left" Margin="77,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.729,1.644" Foreground="#FFEDF3F2" FontWeight="Bold" FontFamily="Open Sans Semibold" BorderBrush="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label Content="Default Gateway " HorizontalAlignment="Left" Margin="77,102,0,0" VerticalAlignment="Top" Foreground="#FFEDF3F2" FontWeight="Bold" FontFamily="Open Sans Semibold" BorderBrush="{DynamicResource {x:Static SystemColors.InactiveBorderBrushKey}}">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Button HorizontalAlignment="Left" Margin="77,214,0,0" VerticalAlignment="Top" Width="71"  Click = "Button_Click_Clear" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" Height="33" AutomationProperties.AccessKey="D">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.CacheMode>
+                <BitmapCache/>
+            </Button.CacheMode>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="DarkGoldenrod"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+            <Label Content="DHCP" Foreground="#FF290E0E" FontSize="14" FontWeight="Bold"/>
+        </Button>
+        <StackPanel HorizontalAlignment="Left" Height="41" Margin="0,280,0,0" VerticalAlignment="Top" Width="519" Background="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" Opacity="0">
+            <StackPanel.Effect>
+                <BlurEffect/>
+            </StackPanel.Effect>
+            <TextBox Height="40" TextWrapping="Wrap" Text="TextBox" Margin="227,0,0,0" Background="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" BorderBrush="#FFEC1F1F"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
